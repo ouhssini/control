@@ -2,6 +2,7 @@
 
 // Classe abstraite OFPPT
 abstract class Ofppt {  
+    private $id = [];
     private $nom;
     private $adresse;
     private $telephone;

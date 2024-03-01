@@ -145,7 +145,7 @@ if (isset($_POST['player'])) {
                 <select class="form-control" id="equipe" name="selected" onchange="this.form.submit()" <?php if(!isset($_SESSION['match'])) {echo 'disabled';}?>>
                 
                 <?php if(!isset($_SESSION['match'])) {echo '<option>planifier un match svp</option>';}?>
-
+                        <option></option>
                 <?php for ($i = 0; $i < 2; $i++) { ?>
 
                         <option value="<?= $_SESSION['match'][$i] ?>"><?= $_SESSION['match'][$i] ?></option>
