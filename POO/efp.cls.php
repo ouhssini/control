@@ -1,20 +1,10 @@
 <?php
-
-abstract class Efp {
-    private $id;
-    private $nom;
-    private $adresse;
-    private $ville;
-    private $telephone;
-    private $email;
+include'cmpx.cls.php';
+abstract class Efp  extends ComplexeDeFormation{
     private $nombrestagiare;
-    public function __construct($id, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare) {
-        $this->id = $id;
-        $this->nom = $nom;
-        $this->adresse = $adresse;
-        $this->ville = $ville;
-        $this->telephone = $telephone;
-        $this->email = $email;
+    static $nombreFormateurs;
+    public function __construct($id, $directure_regional, $nom, $adresse, $telephone, $email, $directure,$nombrestagiare) {
+        parent::__construct($id, $directure_regional, $nom, $adresse, $telephone, $email, $directure);
         $this->nombrestagiare = $nombrestagiare;
     }
 

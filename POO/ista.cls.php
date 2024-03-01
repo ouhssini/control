@@ -6,9 +6,10 @@ include 'efp.cls.php';
 class Ista extends Efp {
  private $nombreFormateur ;
 
- public function __construct($id, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare,$nombreFormateur) {
-        parent::__construct($id, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare);
+ public function __construct($id, $directure_regional, $nom, $adresse, $telephone, $email, $directure,$nombrestagiare,$nombreFormateur) {
+        parent::__construct($id, $directure_regional, $nom, $adresse, $telephone, $email, $directure,$nombrestagiare);
         $this->nombreFormateur = $nombreFormateur;
+        parent::$nombreFormateurs += $this->nombreFormateur;
     }
     public function getNombreDeFormateur() {
         return $this->nombreFormateur;

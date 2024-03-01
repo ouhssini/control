@@ -3,9 +3,10 @@ include 'efp.cls.php';
 
 class UniteMobile extends Efp {
     private $nomFormateur;
-    public function __construct($id, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare,$nomFormateur) {
-           parent::__construct($id, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare);
+    public function __construct($id,$directure_regional, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare,$nomFormateur) {
+           parent::__construct($id, $directure_regional,$nom, $adresse, $ville, $telephone,$email,$nombrestagiare);
            $this->nomFormateur = $nomFormateur;
+           parent::$nombreFormateurs++;
        }
        public function getNombreDeFormateur() {
            return 1;

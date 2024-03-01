@@ -7,12 +7,13 @@ class EfpPrison extends Efp {
  private $nombreFormateur ;
 private $nomPrison;
 private $nomResponsable;
- public function __construct($id, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare,$nombreFormateur,$nomprison,$nomResponsable) {
-        parent::__construct($id, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare);
+ public function __construct($id, $directure_regional,$nom, $adresse, $ville, $telephone,$email,$nombrestagiare,$nombreFormateur,$nomprison,$nomResponsable) {
+        parent::__construct($id,$directure_regional, $nom, $adresse, $ville, $telephone,$email,$nombrestagiare);
+
         $this->nombreFormateur = $nombreFormateur;
         $this->nomPrison = $nomprison;
         $this->nomResponsable = $nomResponsable;
-
+        parent::$nombreFormateurs+=$this->nombreFormateur;
     }
     public function getNombreDeFormateur() {
         return $this->nombreFormateur;
